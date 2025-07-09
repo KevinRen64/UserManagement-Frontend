@@ -11,14 +11,18 @@ function AddUserFormWrapper () {
 
   // Function to send new user data to the backend and navigate to the homepage after success
   const addUser = async (user) => {
+    const token = localStorage.getItem('token');
     const res = await fetch("http://localhost:5000/User/AddUser", {
       method: "POST",
-      headers: {'Content-Type': 'application/json'},
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      },
       // Convert user object to JSON string
       body: JSON.stringify(user),
     });
     // After successful submission, go back to the main user list
-    navigate('/');
+    navigate('/users');
   };
   // Render the AddUserForm component, passing the addUser function as a prop
   return <AddUserForm onAddUser={addUser} />;

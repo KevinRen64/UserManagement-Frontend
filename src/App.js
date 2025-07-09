@@ -1,7 +1,10 @@
 import UserManagementApp from './pages/UserManagementApp';   // Main page showing user list and management
 import AddUserFormWrapper from './components/AddUserFormWrapper';
+import LoginForm from './pages/LoginForm';
 import './styles/App.css';                                   // Global app styles
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';   // React Router components and hooks
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';   // React Router components and hooks
+import Register from './pages/Register';
+import ProtectedRoute from './components/ProtectedRoute';
 
 
 /**
@@ -14,7 +17,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<UserManagementApp />} />
+        <Route path="/" element={<LoginForm />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/users" element={
+          <ProtectedRoute>
+            <UserManagementApp />
+          </ProtectedRoute>
+          } />
         <Route path="/add" element={<AddUserFormWrapper />} />
       </Routes>
     </Router>
