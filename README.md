@@ -24,7 +24,7 @@ A responsive and user-friendly React frontend for managing users, connected to a
 > Example: `Login Page`, `User List`, `Add User Modal`, etc.
 
 ## 📂 Folder Structure
-
+```bash
 src/
 │
 ├── components/ # Reusable components (e.g., UserList, AddUserForm)
@@ -32,10 +32,6 @@ src/
 ├── styles/ # CSS files
 ├── App.js # Main app component
 ├── index.js # Entry point
-
-bash
-Copy
-Edit
 
 ## 🔧 Setup & Run Locally
 
@@ -46,8 +42,6 @@ cd UserManagement-Frontend
 Install dependencies
 
 bash
-Copy
-Edit
 npm install
 Run the app
 
