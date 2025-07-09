@@ -18,11 +18,6 @@ A responsive and user-friendly React frontend for managing users, connected to a
 - **Backend**: [ASP.NET Core Web API](https://github.com/KevinRen64/UserManagement) (Dapper, SQL Server)
 - **Auth**: JWT token-based authentication
 
-## 📸 Screenshots
-
-> Add screenshots here (optional)
-> Example: `Login Page`, `User List`, `Add User Modal`, etc.
-
 ## 📂 Folder Structure
 ```bash
 src/
@@ -33,8 +28,9 @@ src/
 ├── App.js # Main app component
 ├── index.js # Entry point
 
-## 🔧 Setup & Run Locally
 
+## 🔧 Setup & Run Locally
+```bash
 1. **Clone the repo**
 ```bash
 git clone https://github.com/KevinRen64/UserManagement-Frontend.git
