@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import UserManagementApp from './pages/UserManagementApp';   // Main page showing user list and management
+import AddUserFormWrapper from './components/AddUserFormWrapper';
+import './styles/App.css';                                   // Global app styles
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';   // React Router components and hooks
 
+
+/**
+ * App Component
+ * Sets up the application's routing structure using React Router.
+ * - '/' renders the user management list view
+ * - '/add' renders the form to add a new user
+ */
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<UserManagementApp />} />
+        <Route path="/add" element={<AddUserFormWrapper />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,0 +1,28 @@
+.header {
+  height: 70px;
+  background-color: aqua;
+  font-size: 40px;
+  text-align: center;
+}
+
+.button-add-user-container {
+  display: flex;
+  justify-content: right;
+  margin: 10px 0px 10px 0px;
+}
+
+
+.button-add-user {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button-add-user :hover {
+  background-color: #c0392b;
+}
+
