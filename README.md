@@ -29,21 +29,4 @@ src/
 ├── index.js # Entry point
 
 
-## 🔧 Setup & Run Locally
-```bash
-1. **Clone the repo**
-```bash
-git clone https://github.com/KevinRen64/UserManagement-Frontend.git
-cd UserManagement-Frontend
-Install dependencies
 
-bash
-npm install
-Run the app
-
-bash
-Copy
-Edit
-npm start
-Connect to Backend
-Make sure your backend API is running and update the API URL in your frontend (likely in an Axios config or .env file).
